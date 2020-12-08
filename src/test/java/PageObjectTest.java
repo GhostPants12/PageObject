@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class PageObjectTest {
+    @Before
+    public void init(){
+        System.setProperty("webdriver.chrome.driver","C:\\WebDriver\\chromedriver.exe");
+    }
+
     @Test
     public void cheapSortedTest(){
         WebDriver driver = new ChromeDriver();
